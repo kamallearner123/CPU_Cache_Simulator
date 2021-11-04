@@ -13,9 +13,17 @@ Code:
 =====
 Directory: /code
 
-Example:
-=======
-$./first 32 assoc:2 lru 4 trace2.txt
+Example of executing:
+====================
+$./cache_sim 32 assoc:2 lru 4 trace2.txt
+
+Exmaple: ./cache_sim 32 assoc:2 lru 4 trace2.txt
+Arguments: 
+    <1. Cache Memory Size 
+    <2. Association>
+    <3. Replacement Policy>
+    <4. Block size>
+    <5. Trace file>
 
 no-prefetch
 

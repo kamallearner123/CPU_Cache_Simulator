@@ -1,4 +1,4 @@
-#include "first.h"
+#include "main.h"
 
 #ifdef SET_ASSOC
 SetAssocDetails stSetAssocDetails;
@@ -51,6 +51,19 @@ int main(int argc, char **argv)
 	int iRet;
 	char line[1024], *acTemp=NULL;
 	long size = 0;
+
+
+    if (argc <= 1) {
+        printf("Provide sufficient arguments.\n \
+                Exmaple: ./first 32 assoc:2 lru 4 trace2.txt\n \
+                Argument: \n\
+                <1. Cache Memory Size \n\
+                <2. Association>\n\
+                <3. Replacement Policy>\n\
+                <4. Block size>\n\
+                <5. Trace file>\n");
+        exit(-1);
+    }
 
 	lCacheSize = atol(argv[1]);
 	//iCachePolicy = atol(argv[3]);
